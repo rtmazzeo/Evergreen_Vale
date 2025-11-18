@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install",
+  "framework": "vite",
+  "outputDirectory": "dist/public",
+  "env": {
+    "VITE_APP_TITLE": "Evergreen Vale",
+    "VITE_APP_LOGO": "/logo.svg"
+  }
+}
