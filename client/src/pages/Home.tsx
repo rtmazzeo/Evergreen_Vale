@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { APP_LOGO, APP_TITLE } from "@/const";
 import { useState } from "react";
 import { useLocation } from "wouter";
+import { Button } from "@/components/ui/button";
+import PatreonCard from "@/components/PatreonCard";
+import ShareButtons from "@/components/ShareButtons";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -219,6 +221,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Patreon Section */}
+      <PatreonCard position="section" tierHighlight="contributor" />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-amber-500/10 to-orange-600/10 border-t border-slate-700/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -228,13 +233,23 @@ export default function Home() {
           <p className="text-xl text-slate-300 mb-8">
             Sua jornada começa agora. Descubra os segredos, conheça os personagens e molde seu destino.
           </p>
-          <Button 
-            onClick={() => setLocation("/game")}
-            size="lg"
-            className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold text-lg px-8 py-6"
-          >
-            Começar Jogo Agora
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Button 
+              onClick={() => setLocation("/game")}
+              size="lg"
+              className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold text-lg px-8 py-6"
+            >
+              Começar Jogo Agora
+            </Button>
+          </div>
+          <div className="flex justify-center">
+            <ShareButtons 
+              title="Evergreen Vale - Um jogo web novel driven"
+              description="Descubra os segredos de Vale Verde. Uma experiência narrativa imersiva com escolhas que importam."
+              position="horizontal"
+              size="md"
+            />
+          </div>
         </div>
       </section>
 
@@ -258,6 +273,15 @@ export default function Home() {
               <a href="#" className="text-slate-400 hover:text-amber-400 transition-colors">
                 Privacidade
               </a>
+            </div>
+          </div>
+          <div className="border-t border-slate-700/50 pt-6 mt-6 flex justify-center">
+            <div className="text-center">
+              <p className="text-slate-400 text-sm mb-3">Compartilhe Evergreen Vale com seus amigos</p>
+              <ShareButtons 
+                position="horizontal"
+                size="sm"
+              />
             </div>
           </div>
         </div>

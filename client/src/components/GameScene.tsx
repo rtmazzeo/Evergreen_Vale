@@ -10,6 +10,12 @@ interface GameSceneProps {
   onChoice: (effects: any, nextScene: string) => void;
 }
 
+const SCENE_IMAGES: Record<string, string> = {
+  day1_bathroom: "/quarto.png",
+  day1_kitchen: "/quarto.png",
+  day1_exploration: "/quarto.png",
+};
+
 export default function GameScene({
   sceneId,
   gameState,
@@ -17,6 +23,7 @@ export default function GameScene({
   onChoice,
 }: GameSceneProps) {
   const scene = GAME_SCENES[sceneId];
+  const sceneImage = SCENE_IMAGES[sceneId];
 
   if (!scene) {
     return (
@@ -40,6 +47,18 @@ export default function GameScene({
         <h2 className="text-3xl font-bold text-white">{scene.title}</h2>
         <div className="h-1 w-20 bg-gradient-to-r from-amber-500 to-orange-600 mx-auto rounded-full"></div>
       </div>
+
+      {/* Scene Image */}
+      {sceneImage && (
+        <div className="relative w-full max-h-96 overflow-hidden rounded-lg border border-slate-700/50 shadow-lg">
+          <img
+            src={sceneImage}
+            alt={scene.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+        </div>
+      )}
 
       {/* Scene Narrative */}
       <Card className="bg-slate-800/50 border-slate-700/50 p-8">

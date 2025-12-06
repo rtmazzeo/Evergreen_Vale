@@ -36,4 +36,28 @@
 
 ## Publicação
 - [x] Preparar arquivos para download
-- [ ] Criar instruções para GitHub e Vercel
+- [x] Criar instruções para GitHub e Vercel
+- [x] Integrar imagem do quarto/banheiro nas cenas
+- [x] Criar arquivo vercel.json para configuração de deploy
+- [x] Criar descrição para geração de imagem da protagonista feminina
+- [x] Integrar componente PatreonCard na landing page
+- [x] Criar documentação de Google Analytics e Patreon
+- [x] Criar componente de compartilhamento social
+- [x] Integrar ShareButtons em CTA e footer
+
+## Integração Patreon
+- [x] Criar componente PatreonCard reutilizável com customização de posição
+- [x] Integrar Google Analytics 4 ao projeto
+- [x] Configurar event tracking para cliques em Patreon
+- [x] Adicionar PatreonCard à landing page (antes do footer)
+- [x] Testar responsividade em mobile e desktop
+- [x] Criar documentação de setup para métricas
+- [ ] Configurar dashboard customizado no Google Analytics (manual no GA4)
+
+## Compartilhamento Social
+- [x] Criar componente ShareButtons com suporte a Twitter, Facebook, WhatsApp, LinkedIn
+- [x] Adicionar botão de copiar link
+- [x] Integrar ShareButtons na seção CTA da landing page
+- [x] Integrar ShareButtons no footer
+- [x] Configurar rastreamento de eventos sociais no GA4
+- [x] Testar funcionalidade de compartilhamento
